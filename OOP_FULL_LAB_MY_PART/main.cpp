@@ -36,7 +36,7 @@ int main()
 	cout << a.Do(20, 3) + b.Do(10, 2) + c.Do(30, 2) + d.Do(50, 1) + e.Do(400, 3) + f.Do(400, 3) << endl;
 
 	cout << a.Get_total_burned_cal();
-
+	cout << '1' << endl;
 	
 
 /*
