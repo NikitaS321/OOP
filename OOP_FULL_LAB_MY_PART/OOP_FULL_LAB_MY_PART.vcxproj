@@ -147,10 +147,14 @@
     <ClCompile Include="Pull_Up.cpp" />
     <ClCompile Include="Push_Up.cpp" />
     <ClCompile Include="Run.cpp" />
+    <ClCompile Include="eat.cpp" />
     <ClCompile Include="Squats.cpp" />
     <ClCompile Include="Twisting.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="diares.h" />
+    <ClInclude Include="enums.h" />
+    <ClInclude Include="food.h" />
     <ClInclude Include="Header_BasicEx.h" />
     <ClInclude Include="Header_EnduranceEx.h" />
     <ClInclude Include="Header_Exercise.h" />
