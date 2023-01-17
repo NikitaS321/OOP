@@ -35,11 +35,6 @@ void Exercise::Set_my_distance(int my_distance)
 	this->my_distance = my_distance;
 }
 
-void Exercise::Set_type_of_ex(std::string type_of_ex)
-{
-	this->type_of_ex = type_of_ex;
-}
-
 double Exercise::Get_total_burned_cal()
 {
 	return total_burned_cal;

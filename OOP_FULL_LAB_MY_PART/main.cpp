@@ -4,9 +4,29 @@
 #include <fstream>
 #include <vector>
 #include <windows.h>
-
+#include "Header_BasicEx.h"
 using namespace std;
 
+template < typename T >
+void Show_Characriristic_of_basic_exercises(T my_ex)
+{
+	cout << "Вправа: " << my_ex.Get_type_of_ex() << endl;
+	cout << "Кількість зроблених разів: " << my_ex.Get_my_times() << endl;
+	cout << "Кількість повторів: " << my_ex.Get_my_repeat() << endl;
+	cout << "Кількість спалених Ккалорій (за 1 раз): " << my_ex.Get_burned_cal() << "ккал." << endl;
+	cout << "Загальна кількість спалених Ккалорій: " << my_ex.Get_total_burned_cal() << "ккал." << endl;
+	cout << endl;
+}
+
+template < typename G >
+void Show_Characriristic_of_endurance_exercises(G my_ex)
+{
+	cout << "Вправа: " << my_ex.Get_type_of_ex() << endl;
+	cout << "Кількість пробіганих метрів " << my_ex.Get_my_distance() << endl;
+	cout << "Кількість спалених ккал (за 1 метр): " << my_ex.Get_burned_cal() << "ккал." << endl;
+	cout << "Загальна кількість спалених ккал: " << my_ex.Get_total_burned_cal() << "ккал." << endl;
+	cout << endl;
+}
 
 int main()
 {
@@ -14,106 +34,53 @@ int main()
 	SetConsoleOutputCP(1251);
 
 
-	Push_Up a;
-	Pull_Up b;
-	Twisting c;
-	Squats d;
-
-	Run e;
-	Bicycle f;
-
-	// первое значение кол-во сделаных раз, второе значение кол во подходов
-	a.Do(20,3);
-	b.Do(10,2);
-	c.Do(30,2);
-	d.Do(50,1);
-
-	// первое значение метры, 2рое значение кол во кругов
-	e.Do(400,3);
-	f.Do(400,3);
-
-
-	cout << a.Do(20, 3) + b.Do(10, 2) + c.Do(30, 2) + d.Do(50, 1) + e.Do(400, 3) + f.Do(400, 3) << endl;
-
-	cout << a.Get_total_burned_cal();
-	
-	
-
-/*
-	Basic_Exercises one;
-	double a = one.Do("Twisting", 30, 3);
-	double b = one.Get_burned_cal();
-	double c = one.Get_total_burned_cal();
-	int d = one.Get_my_repeat();
-	int e = one.Get_my_times();
-	string q = one.Get_type_of_ex();
-	cout << a << " Спалено калорій" << endl;
-	cout << b << " вправа спалила калорії " << endl;
-	cout << c << " всього спалено калорій" << endl;
-	cout << d << " кількість підходів" << endl;
-	cout<< e << " кількість повторів" << endl;
-	cout<< q << " назва вправи" << endl;
-	cout << endl;
-	cout << endl;
-	a = one.Do("Push_Up", 20, 2);
-	b = one.Get_burned_cal();
-	c = one.Get_total_burned_cal();
-	d = one.Get_my_repeat();
-	e = one.Get_my_times();
-	q = one.Get_type_of_ex();
-	cout << a << " Спалено калорій" << endl;
-	cout << b << " вправа спалила калорії " << endl;
-	cout << c << " всього спалено калорій" << endl;
-	cout << d << " кількість підходів" << endl;
-	cout << e << " кількість повторів" << endl;
-	cout << q << " назва вправи" << endl;
-	cout << endl;
-	cout << endl;
-	a = one.Do("Twisting", 60, 2);
-	b = one.Get_burned_cal();
-	c = one.Get_total_burned_cal();
-	d = one.Get_my_repeat();
-	e = one.Get_my_times();
-	q = one.Get_type_of_ex();
-	cout << a << " Спалено калорій" << endl;
-	cout << b << " вправа спалила калорії " << endl;
-	cout << c << " всього спалено калорій" << endl;
-	cout << d << " кількість підходів" << endl;
-	cout << e << " кількість повторів" << endl;
-	cout << q << " назва вправи" << endl;
-	
-
-
-
-	
-	vector <int> arr_Basic_ExercisesT;
-	vector <int> arr_Basic_ExercisesR;
-	vector <int> arr_EnduranceEx;
-
+	Twisting first_ex;
+	Push_Up second_ex;
+	Pull_Up third_ex;
+	Squats forth_ex;
+	Run fifth_ex;
+	Bicycle sixth_ex;
+	int repeat = 2;
+	int times = 20;
+	int distance = 400;
+	int loops = 3;
 	fstream file;
 
-	Basic_Exercises one;
-	double a = one.Do("Twisting", 30, 3);
-	cout << a << endl;
-	cout << one.my_times << " my_times " << endl;
-	cout << one.my_repeat << " my_repeat " << endl;
-	arr_Basic_ExercisesT.push_back(one.my_times);
-	arr_Basic_ExercisesR.push_back(one.my_repeat);
+	vector <int> date;
+	int day, month, year;
+	cout << "Введіть день : ";
+	cin >> day;
+	date.push_back(day);
+	cout << "Введіть місяць : ";
+	cin >> month;
+	date.push_back(month);
+	cout << "Введіть рік : ";
+	cin >> year;
+	date.push_back(year);
 
-	double b = one.Do("Push_Up", 20, 2);
-	cout << b << endl;
-	cout << one.my_times << " my_times " << endl;
-	cout << one.my_repeat << " my_repeat " << endl;
-	arr_Basic_ExercisesT.push_back(one.my_times);
-	arr_Basic_ExercisesR.push_back(one.my_repeat);
+	vector <Basic_Exercises*> arr_basic;
+	first_ex.Do(times, repeat);
+	arr_basic.push_back(&first_ex);
+	second_ex.Do(times, repeat);
+	arr_basic.push_back(&second_ex);
+	third_ex.Do(times, repeat);
+	arr_basic.push_back(&third_ex);
+	forth_ex.Do(times, repeat);
+	arr_basic.push_back(&forth_ex);
 
-	double c = one.Do("Pull_Up", 10, 1);
-	cout << c << endl;
-	cout << one.my_times << " my_times " << endl;
-	cout << one.my_repeat << " my_repeat " << endl;
-	arr_Basic_ExercisesT.push_back(one.my_times);
-	arr_Basic_ExercisesR.push_back(one.my_repeat);
+	vector <EnduranceEx*> arr_endurance;
+	fifth_ex.Do(distance, loops);
+	arr_endurance.push_back(&fifth_ex);
+	sixth_ex.Do(distance, loops);
+	arr_endurance.push_back(&sixth_ex);
 
+
+	Show_Characriristic_of_basic_exercises(first_ex);
+	Show_Characriristic_of_basic_exercises(second_ex);
+	Show_Characriristic_of_basic_exercises(third_ex);
+	Show_Characriristic_of_basic_exercises(forth_ex);
+	Show_Characriristic_of_endurance_exercises(fifth_ex);
+	Show_Characriristic_of_endurance_exercises(sixth_ex);
 
 	file.open("Щоденник.txt", ios::app);
 	if (!file.is_open())
@@ -123,31 +90,30 @@ int main()
 	}
 	else
 	{
-		for (int i = 0; i < arr_Basic_ExercisesT.size(); i++)
+		file << "Date: ";
+		for (int i = 0; i < date.size(); i++)
 		{
-			file << arr_Basic_ExercisesT[i] << " кількість повторів "<<"\t"<< arr_Basic_ExercisesR[i] << " кількість підходів " << endl;
+			file << date[i] << " ";
 		}
+		file << endl;
+
+		for (int i = 0; i < arr_basic.size(); i++)
+		{
+			file << "Вправа: " << arr_basic[i]->Get_type_of_ex() << endl;
+			file << "Кількість разів: " << arr_basic[i]->Get_my_times() << endl;
+			file << "Кількість повторів:" << arr_basic[i]->Get_my_repeat() << endl;
+			file << endl;
+		}
+		for (int i = 0; i < arr_endurance.size(); i++)
+		{
+			file << "Вправа: " << arr_endurance[i]->Get_type_of_ex() << endl;
+			file << "Дистанція(метри): " << arr_endurance[i]->Get_my_distance() << endl;
+			file << endl;
+		}
+		file << endl;
+		file << endl;
+
 	}
 	file.close();
-
-	EnduranceEx two;
-	double d = two.Do("Run", 400, 5);
-	cout << d << endl;
-	cout << two.my_distance << " my_distance " << endl;
-
-	cout << endl;
-	cout << endl;
-
-
-	double e = two.Do("Bicycle", 400, 5);
-	cout << e << endl;
-	cout << two.my_distance << " my_distance " << endl;
-	cout << endl;
-	cout << endl;
-
-
-	cout << a + b + c + d + e << " Сожжено за тренировку" << endl;
-*/
-
 	return 0;
 }

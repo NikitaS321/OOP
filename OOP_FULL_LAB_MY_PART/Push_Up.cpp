@@ -4,11 +4,13 @@ Push_Up::Push_Up()
 {
 	this->averagetimes_per_min = 30;
 	this->average_burned = 4;
+	this->type_of_ex = "Push_Up";
 }
 
 double Push_Up::Coef_Calculate()
 {
-	double coef = (average_burned / averagetimes_per_min) * 15;
+	double coef = (average_burned / averagetimes_per_min) * 10;
 	coef = round(coef * 10) / 10;
+	Set_burned_cal(coef);
 	return coef;
 }
