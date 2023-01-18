@@ -141,25 +141,29 @@
   <ItemGroup>
     <ClCompile Include="Basic_Ex.cpp" />
     <ClCompile Include="Bicycle.cpp" />
+    <ClCompile Include="Diary.cpp" />
     <ClCompile Include="EnduranceEx.cpp" />
     <ClCompile Include="Exercise.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pull_Up.cpp" />
     <ClCompile Include="Push_Up.cpp" />
     <ClCompile Include="Run.cpp" />
-    <ClCompile Include="eat.cpp" />
+    <ClCompile Include="Food.cpp" />
     <ClCompile Include="Squats.cpp" />
     <ClCompile Include="Twisting.cpp" />
+    <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicEx.h" />
     <ClInclude Include="diares.h" />
+    <ClInclude Include="Diary.h" />
     <ClInclude Include="EnduranceEx.h" />
-    <ClInclude Include="enums.h" />
+    <ClInclude Include="Dishes.h" />
     <ClInclude Include="Exercise.h" />
-    <ClInclude Include="food.h" />
+    <ClInclude Include="Food.h" />
     <ClInclude Include="Type_Basic_Exercises.h" />
     <ClInclude Include="Type_Endurance_Exercises.h" />
+    <ClInclude Include="User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

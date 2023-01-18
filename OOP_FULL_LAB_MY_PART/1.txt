@@ -1,0 +1,21 @@
+Date: 1
+
+Name: Nikita
+Age: 2
+Height: 153
+Weight: 220
+Callories gain per day: 976
+
+Food: 
+Dish: hurma
+Calories: 1000
+Carbohydrates: 10
+Fats: 10
+Proteins: 10
+Weight: 10
+
+Exercise: 
+Exercise: Bicycle
+Burned calories: 24
+Distance: 400
+Repeats : 2
