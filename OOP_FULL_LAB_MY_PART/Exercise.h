@@ -1,4 +1,3 @@
-
 #pragma once
 #include <string>
 
@@ -17,7 +16,7 @@ protected:
 	virtual double Coef_Calculate() = 0;
 
 public:
-	double Get_burned_cal() const;
-	int Get_my_repeat() const;
+	double Get_burned_cal() const; // const для того что бы можно было использовать переменные в функциях
+	int Get_my_repeat() const; //  (дать понять что она не будет меняться /модифицироватся )
 	std::string Get_type_of_ex() const;
 };

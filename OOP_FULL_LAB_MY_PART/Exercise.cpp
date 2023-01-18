@@ -1,4 +1,3 @@
-
 #include "Exercise.h"
 
 void Exercise::Set_burned_cal(double burned_cal)

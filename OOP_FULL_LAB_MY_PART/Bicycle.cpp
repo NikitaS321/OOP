@@ -13,6 +13,5 @@ double Bicycle::Coef_Calculate()
 {
 	double coef = (average_burned / averagetimes_per_min);
 	coef = round(coef * 100) / 100;
-	Set_burned_cal(coef);
 	return coef;
 }

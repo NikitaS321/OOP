@@ -4,18 +4,18 @@ Name: Nikita
 Age: 2
 Height: 153
 Weight: 220
-Callories gain per day: 976
+Callories gain per day: 78
 
 Food: 
-Dish: hurma
-Calories: 1000
+Dish: kfkf
+Calories: 150
 Carbohydrates: 10
 Fats: 10
 Proteins: 10
-Weight: 10
+Weight: 1
 
 Exercise: 
-Exercise: Bicycle
-Burned calories: 24
-Distance: 400
-Repeats : 2
+Exercise: Twisting
+Burned calories: 72
+Times: 2
+Repeats : 20

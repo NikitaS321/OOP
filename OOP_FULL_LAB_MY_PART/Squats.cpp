@@ -3,7 +3,6 @@
 
 Squats::Squats(int My_repeat, int My_times)
 {
-
 	my_repeat = My_repeat;
 	my_times = My_times;
 	this->averagetimes_per_min = 45;
@@ -15,6 +14,5 @@ double Squats::Coef_Calculate()
 {
 	double coef = (average_burned / averagetimes_per_min) * 13;
 	coef = round(coef * 10) / 10;
-	Set_burned_cal(coef);
 	return coef;
 }
