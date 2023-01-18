@@ -1,17 +1,16 @@
 #pragma once
-#include "Header_EnduranceEx.h"
+#include "EnduranceEx.h"
 class Run : public EnduranceEx
 {
 public:
-	Run();
-private:
+	Run(int My_repeat, int My_distance);
+protected:
 	double Coef_Calculate() override;
 };
-
 class Bicycle : public EnduranceEx
 {
 public:
-	Bicycle();
-private:
+	Bicycle(int My_repeat, int My_distance);
+protected:
 	double Coef_Calculate() override;
 };

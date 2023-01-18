@@ -152,12 +152,12 @@
     <ClCompile Include="Twisting.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BasicEx.h" />
     <ClInclude Include="diares.h" />
+    <ClInclude Include="EnduranceEx.h" />
     <ClInclude Include="enums.h" />
+    <ClInclude Include="Exercise.h" />
     <ClInclude Include="food.h" />
-    <ClInclude Include="Header_BasicEx.h" />
-    <ClInclude Include="Header_EnduranceEx.h" />
-    <ClInclude Include="Header_Exercise.h" />
     <ClInclude Include="Type_Basic_Exercises.h" />
     <ClInclude Include="Type_Endurance_Exercises.h" />
   </ItemGroup>

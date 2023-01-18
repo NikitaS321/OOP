@@ -1,7 +1,11 @@
+
 #include "Type_Basic_Exercises.h"
 
-Push_Up::Push_Up()
+Push_Up::Push_Up(int My_repeat, int My_times)
 {
+
+	my_repeat = My_repeat;
+	my_times = My_times;
 	this->averagetimes_per_min = 30;
 	this->average_burned = 4;
 	this->type_of_ex = "Push_Up";
